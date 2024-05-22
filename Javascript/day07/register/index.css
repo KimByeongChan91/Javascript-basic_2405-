@@ -1,0 +1,57 @@
+/* .checkBoxes {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.checkBox_01{
+
+}
+
+.checkBox_02{
+    
+}
+
+.checkBox_03{
+    
+}
+
+.checkBox_04{
+    
+}
+
+button {
+  opacity: 50%;
+}
+
+.nextBtn {
+  width: 150px;
+  height: 100px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-weight: 800;
+} */
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.notChecked {
+  color: #dbdbdb;
+}
+
+.checked {
+  color: black;
+}
+
+.notPassed {
+  background-color: #dbdbdb;
+}
+
+.passed {
+  background-color: black;
+  color: white;
+}

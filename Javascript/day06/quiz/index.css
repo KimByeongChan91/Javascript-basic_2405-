@@ -18,39 +18,39 @@
   background-color: blue;
 }
 
-.size_100 {
+.small {
   width: 100px;
   height: 100px;
 }
 
-.size_200 {
+.medium {
   width: 200px;
   height: 200px;
 }
 
-.size_300 {
+.large {
   width: 300px;
   height: 300px;
 }
 
-.size_400 {
+.x-large {
   width: 400px;
   height: 400px;
 }
 
-.size_500 {
+.xx-large {
   width: 500px;
   height: 500px;
 }
 
-.radius_0 {
+.radiusZero {
   border-radius: 0px;
 }
 
-.radius_10 {
+.radiusTen {
   border-radius: 10px;
 }
 
-.radius_20 {
+.radiusTwenty {
   border-radius: 20px;
 }
