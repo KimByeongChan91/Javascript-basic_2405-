@@ -1,0 +1,13 @@
+.btnList {
+  display: flex;
+  flex-direction: column;
+}
+
+.notPassed {
+  background-color: #dbdbdb;
+}
+
+.passed {
+  background-color: black;
+  color: white;
+}
