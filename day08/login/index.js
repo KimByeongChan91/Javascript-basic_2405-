@@ -47,6 +47,8 @@ const btnList = document.querySelector('.btnList');
 const emailInput = document.querySelector('.emailInput');
 
 emailInput.addEventListener('input', (e) => {
+  // const isContainSC = email.value.con('!','@','#','$','%','^','&','*','(',')','-','+',)
+
   e.target.value = e.target.value.include.target('@')
     ? e.target.value
     : emailInput.value('@ 입력');
@@ -62,6 +64,9 @@ const pwInput = document.querySelector('.pwInput');
 pwInput.addEventListener('input', (e) => {
   const isUpTen = e.target.value > 10;
   e.target.value = isUpTen ? e.target.value : e.target.value('10자 이상 입력');
+  e.target.value.include('!', '@', '#')
+    ? pwInput.value
+    : '특수문자 하나라도 입력';
 });
 
 const repeatInput = document.querySelector('.repeatInput');
