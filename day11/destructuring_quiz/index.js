@@ -11,21 +11,32 @@ import { backendData } from './data.js';
 //   console.log(v.id, v.currency, v.money, v.phone);
 // });
 
-// 2.
-// backendData.forEach((v)=>{
-//     const {animalName:animal {carMake:v.carMake, carModel: v.carModel, carModelYear:v.carModelYear}} = backendData
-// })
+const one = backendData.map(({id, currency, money, phone})=>({
+    id,
+    currency,
+    money,
+    phone,
+}))
 
-// 3.
-backendData.forEach((v, i) => {
-  const a = v.ipAddress.split([7]);
-  const arr1 = a[0];
-  const arr2 = a[1];
-  console.log(arr1);
-  console.log(arr2);
-});
+// 2. animalName => {animal, car:{make,year,model}} 콘솔로
+const two = backendData.map(({animalName:animal, carMake:make, carModel:model,carModelYear: year})=>({
+    animal,
+    car:{make,model,year}
+}))
 
-// 4.
-backendData.forEach((v)=>{
-    v.timezone.startsWith('a','e','i','o','u') ? v.timezone.split
-})
+// 3. ipaddress가 맨 마지막 세자리가 합이 10 이하이면, id, color만 콘솔로 찍기
+const c = backendData.filter
+
+// 4.timezone이 알파벳 모음으로 시작하면, {timezone,carmake,phone앞 세자리만 가져오기}
+backendData.map(({timezone,carMake,phone})=>({
+    timezone,
+    carMake,
+    phone: phone.split("-")[0],
+}))
+
+// 5. money가 50000엔 이하이면, phone[하이픈 제거]과 appName[대문자화하고] 가져오기
+const e = backendData.filter(({money})=>money <= 50000).map(({money,phone,appName})=>({
+    money,
+    phone: phone.replaceAll("-",""),
+    appName: appName.toUpperCase()
+}))
