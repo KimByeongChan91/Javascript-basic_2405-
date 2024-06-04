@@ -5,14 +5,33 @@ body {
 }
 
 .headerwrapper {
+  background-color: #786fa6;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
   width: 786px;
-  border: 1px solid;
+  /* border: 1px solid; */
   display: flex;
   margin: 0 auto;
 }
 
+.menuIcon {
+  font-size: 20px;
+}
+
 .title {
   margin: 0 auto;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.day {
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+  width: 786px;
+  color: #786fa6;
+  font-weight: 800;
 }
 
 .wrapper {
@@ -21,14 +40,29 @@ body {
 }
 
 .addValue {
-  color: white;
+  color: #786fa6;
+  font-weight: 800;
+  font-size: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 .result {
-  color: white;
+  color: #786fa6;
+  font-weight: 800;
 }
 
-.plusButton {
+.checked {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.notChecked {
+  color: black;
+}
+
+.btn {
   width: 50px;
   height: 50px;
   margin: 0 auto;
@@ -41,6 +75,5 @@ body {
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
-  
+  top: 5px;
 }
-
