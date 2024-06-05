@@ -44,18 +44,72 @@ function deleteList(e) {
 // ➕ 버튼 클릭하면 upcoming 목록에 할일 추가
 // 빈입력창 추가 ⚠️alert 메시지
 
-export const plusBtnEvent = plusBtn.addEventListener('click', () => {
-  const promptText = window.prompt('일정을 입력하세요.');
+// export const plusBtnEvent = plusBtn.addEventListener('click', () => {
+//   const promptText = window.prompt('일정을 입력하세요.');
 
-  if (promptText.length == String(0)) {
-    window.alert('내용을 입력하세요!');
+//   if (promptText.length == 0) {
+//     window.alert('내용을 입력하세요!');
+//   } else {
+//     const upcomingDiv = document.createElement('div');
+//     const check = document.createElement('button');
+//     const del = document.createElement('button');
+
+//     //
+//     upcomingDiv.innerText = promptText;
+
+//     upcomingDiv.style.width = '700px';
+//     // upcomingDiv.style.color = 'black';
+//     upcomingDiv.style.backgroundColor = 'white';
+//     upcomingDiv.style.padding = '5px 20px 5px 5px';
+//     upcomingDiv.style.borderRadius = '5px';
+//     upcomingDiv.style.marginTop = '5px';
+
+//     //완료 체크버튼,
+
+//     check.innerHTML = '<i class="fa-solid fa-check"></i>';
+//     check.style.fontSize = '10px';
+//     check.style.cursor = 'pointer';
+//     check.style.float = 'right';
+//     check.addEventListener('click', () => {
+//       upcomingDiv.classList.toggle('checked');
+//       upcomingDiv.classList.toggle('notChecked');
+//     });
+
+//     //삭제버튼
+//     del.innerHTML = '<i class="fa-solid fa-x"></i>';
+//     del.style.fontSize = '10px';
+//     del.style.cursor = 'pointer';
+//     del.style.float = 'right';
+
+//     //삭제버튼 클릭시 리스트지우기 이벤트 실행
+//     del.addEventListener('click', deleteList);
+
+//     upcoming.appendChild(upcomingDiv);
+//     upcomingDiv.appendChild(del);
+//     upcomingDiv.appendChild(check);
+//   }
+// });
+
+// Todolist 목록이 빈칸이라면 다시 이미지 띄우기
+
+// 할 일 추가하면 이미지 없어지고 할일 추가되도록
+
+const inputValue = document.getElementById('addValue');
+const inputBtn = document.getElementById('btn');
+
+// input태그로 다시 만들기
+export const inputEvent = inputBtn.addEventListener('click', () => {
+  // const promptText = window.prompt('일정을 입력하세요.');
+
+  if (inputValue.value == false) {
+    alert('내용을 입력하세요!');
   } else {
     const upcomingDiv = document.createElement('div');
     const check = document.createElement('button');
     const del = document.createElement('button');
 
     //
-    upcomingDiv.innerText = promptText;
+    upcomingDiv.innerText = inputValue.value;
 
     upcomingDiv.style.width = '700px';
     // upcomingDiv.style.color = 'black';
@@ -89,7 +143,3 @@ export const plusBtnEvent = plusBtn.addEventListener('click', () => {
     upcomingDiv.appendChild(check);
   }
 });
-
-// Todolist 목록이 빈칸이라면 다시 이미지 띄우기
-
-// 할 일 추가하면 이미지 없어지고 할일 추가되도록

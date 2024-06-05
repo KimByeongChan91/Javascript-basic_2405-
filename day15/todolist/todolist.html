@@ -25,7 +25,13 @@
     </header>
     <div class="day"></div>
     <section class="wrapper">
-      <div class="addValue" id="addList">LIST TO DO</div>
+      <div class="inputfield">
+        <input type="text" id="addValue" placeholder="할 일 추가하기" />
+        <button type="button" id="btn" onclick="addTodo()">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <div class="listToDo" id="addList">LIST TO DO</div>
       <!-- <div class="result" id="resultList">RESULT</div> -->
     </section>
     <div class="btn" id="btn">+</div>
