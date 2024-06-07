@@ -1,14 +1,4 @@
-// function
 
-const plusBtn = document.getElementById('btn');
-const upcoming = document.getElementById('addList');
-const finished = document.getElementById('resultList');
-
-//할일 목록 삭제 메서드
-function deleteList(e) {
-  const removeOne = e.target.parentElement;
-  removeOne.remove();
-}
 
 //줄 긋는 메서드
 // const makeLine = (e) => {
@@ -90,6 +80,18 @@ function deleteList(e) {
 //   }
 // });
 
+// function
+
+const plusBtn = document.getElementById('btn');
+const upcoming = document.getElementById('addList');
+const finished = document.getElementById('resultList');
+
+//할일 목록 삭제 메서드
+function deleteList(e) {
+  const removeOne = e.target.parentElement;
+  removeOne.remove();
+}
+
 // Todolist 목록이 빈칸이라면 다시 이미지 띄우기
 
 // 할 일 추가하면 이미지 없어지고 할일 추가되도록
@@ -99,7 +101,6 @@ const inputBtn = document.getElementById('btn');
 
 // input태그로 다시 만들기
 export const inputEvent = inputBtn.addEventListener('click', () => {
-  // const promptText = window.prompt('일정을 입력하세요.');
 
   if (inputValue.value == false) {
     alert('내용을 입력하세요!');
@@ -112,7 +113,6 @@ export const inputEvent = inputBtn.addEventListener('click', () => {
     upcomingDiv.innerText = inputValue.value;
 
     upcomingDiv.style.width = '700px';
-    // upcomingDiv.style.color = 'black';
     upcomingDiv.style.backgroundColor = 'white';
     upcomingDiv.style.padding = '5px 20px 5px 5px';
     upcomingDiv.style.borderRadius = '5px';
@@ -125,7 +125,7 @@ export const inputEvent = inputBtn.addEventListener('click', () => {
     check.style.cursor = 'pointer';
     check.style.float = 'right';
     check.addEventListener('click', () => {
-      upcomingDiv.classList.toggle('checked');
+      upcomingDiv.classList.toggle('checked'); 
       upcomingDiv.classList.toggle('notChecked');
     });
 
@@ -134,7 +134,6 @@ export const inputEvent = inputBtn.addEventListener('click', () => {
     del.style.fontSize = '10px';
     del.style.cursor = 'pointer';
     del.style.float = 'right';
-
     //삭제버튼 클릭시 리스트지우기 이벤트 실행
     del.addEventListener('click', deleteList);
 

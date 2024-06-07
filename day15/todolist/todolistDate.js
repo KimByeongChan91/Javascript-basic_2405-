@@ -13,3 +13,17 @@ export const datefunc = setInterval(() => {
 
   day.innerText = `${date.toLocaleString()} ${weeks[date.getDay()]}`;
 }, 1000);
+
+
+// 날짜 배열에 담기
+
+// const todoListData ={}
+// const start = new Date()
+
+
+// Array(365).fill(0),forEach((v,i)=>{
+//  const date = start.toISOString().split('T')[0]
+//  const pureDate = date.replaceAll("=","")
+//   todoListData[pureDate] = []
+//   start.setDate(start.getDate() + 1)
+// })
