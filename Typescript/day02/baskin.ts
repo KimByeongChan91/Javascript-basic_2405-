@@ -23,7 +23,7 @@ type IcecreamProductInfo = {
   engName: string;
   korName: string;
   description: string;
-  mainIngredient: Icon[];
+  // mainIngredient: Icon[];
 };
 
 type NutritionInfo = {
@@ -47,3 +47,25 @@ type IcecreamComposition = {
   nutritionInfo: NutritionInfo;
   photoURL: PhotoURL;
 };
+
+
+// 포함으로 만들어본것
+const baskin1 : IcecreamComposition = {
+  icecreamProductInfo : {
+    category: 'cake',
+    engName: 'string',
+    korName: 'string',
+    description: 'string',
+    // mainIngredient: {}
+  },
+  nutritionInfo : {
+    Servings: 1,
+    kcal: 2,
+    sugars: 3,
+    proteins: 1,
+    salts: 2,
+    allergies: ['계란','대두'],
+  },
+  photoURL : {url:"asdasd"}
+
+}

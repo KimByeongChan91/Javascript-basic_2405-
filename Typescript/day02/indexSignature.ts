@@ -35,3 +35,30 @@ type Bread = {
 
 type abc = keyof Bread; // 'name' | 'price'
 const apple: abc = 'name';
+
+
+
+
+
+
+type Menu = '뜨아' | '아아' | '라떼' | '바라';
+
+type Shots = 1 | 2 | 3 | 4
+
+type Coffees = {
+  name: Menu[];
+  price: number;
+  shot: Shots;
+};
+
+const cafe: Coffees = {
+  name: ['뜨아','라떼'],
+  price: 2000,
+  shot: 2,
+};
+
+const cafe2: Coffees[] = [
+  {name: ['뜨아'], price:1500, shot:2},
+  {name: ["라떼"], price:2000, shot:3},
+  {name: ['바라'], price:3500, shot:2}
+]
