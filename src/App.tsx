@@ -1,26 +1,29 @@
-import NewButton from './util/NewButton';
+import FormInput from './fromInput/FormInput';
+import PillButton from './fromInput/PillButton';
+import { MESSAGE } from './fromInput/message';
 
 function App() {
+  const FormInputComponents = [
+    {
+      InputProps: { placeholoder: MESSAGE.ID },
+      Component: PillButton,
+      ComponentProps: { content: '중복확인' },
+    },
+    {
+      InputProps: { placeholoder: MESSAGE.PW },
+    },
+    {
+      InputProps: { placeholoder: MESSAGE.PWCHECK },
+    },
+  ];
+
   return (
     <div className="App">
-      <NewButton click={() => alert('리액트 빡셈')}></NewButton>
-      <NewButton click={() => alert('리얼 너무 빡세..')}></NewButton>
+      {FormInputComponents.map((v) => (
+        <FormInput {...v} />
+      ))}
     </div>
   );
 }
 
 export default App;
-
-// import SNSLogin from "./sns/SNSLogin";
-// import { FaApple, FaFacebook } from "react-icons/fa";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <SNSLogin SNSTextP={{ sns: "Apple" }} SNSIconP={{ Icon: FaApple }} SNSColorP="Apple" />
-//       <SNSLogin SNSTextP={{ sns: "Facebook" }} SNSIconP={{ Icon: FaFacebook }} SNSColorP="FaceBook" />
-//     </div>
-//   );
-// }
-
-// export default App;
